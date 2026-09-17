@@ -1,6 +1,6 @@
-# DevSecOps CI/CD Pipeline on AWS EKS
+# Automated CI/CD Pipeline on AWS EKS
 
-An end-to-end DevSecOps CI/CD pipeline for deploying a React.js application on Amazon EKS, integrating Jenkins, SonarQube, Trivy, Docker, and Argo CD for automated build, security scanning, containerization, and GitOps-based continuous delivery.
+An end-to-end Automated CI/CD pipeline for deploying a React.js application on Amazon EKS, integrating Jenkins, SonarQube, Trivy, Docker, and Argo CD for automated build, security scanning, containerization, and GitOps-based continuous delivery.
 
 ---
 
