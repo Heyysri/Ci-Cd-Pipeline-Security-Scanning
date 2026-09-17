@@ -181,7 +181,7 @@ sudo apt-get install trivy
 ## 8️⃣ Clone Repo & Configure Pipeline
 
 ```bash
-git clone https://github.com/Heyysri/DevSecOps-CI-CD-Pipeline-Aws-Eks.git
+git clone https://github.com/Heyysri/Ci-Cd-Pipeline-Security-Scanning.git
 ```
 
 ```bash
@@ -195,7 +195,7 @@ k8s/deployment.yml → replace Docker-Hub-Username
 In Jenkins:
 - New Item → Pipeline
 - Pipeline script from SCM → Git
-- Repo URL: `https://github.com/Heyysri/DevSecOps-CI-CD-Pipeline-Aws-Eks.git`
+- Repo URL: `https://github.com/Heyysri/Ci-Cd-Pipeline-Security-Scanning.git`
 - Branch: `main`
 - Script Path: `Jenkinsfile`
 - Click **Build Now**
@@ -299,7 +299,7 @@ Access Argo CD: `http://<ARGOCD-EXTERNAL-IP>`
 | App Name | `devsecops-app` |
 | Project | `default` |
 | Sync Policy | Automatic |
-| Repo URL | `https://github.com/Heyysri/DevSecOps-CI-CD-Pipeline-Aws-Eks.git` |
+| Repo URL | `https://github.com/Heyysri/Ci-Cd-Pipeline-Security-Scanning.git` |
 | Path | `k8s` |
 | Cluster | `https://kubernetes.default.svc` |
 | Namespace | `default` |
@@ -346,7 +346,7 @@ Access app: `http://<EXTERNAL-IP>` ✅
 # 📂 Project Structure
 
 ```text
-DevSecOps-CI-CD-Pipeline-Aws-Eks/
+Ci-Cd-Pipeline-Security-Scanning/
 ├── src/
 ├── public/
 ├── k8s/
@@ -388,7 +388,7 @@ DevSecOps-CI-CD-Pipeline-Aws-Eks/
 
 # ⭐ Project Highlights
 
-- End-to-end DevSecOps CI/CD workflow from source code to Kubernetes deployment
+- End-to-end Automated CI/CD workflow from source code to Kubernetes deployment
 - Automated code quality analysis using SonarQube
 - Security scanning using Trivy for filesystem and Docker image vulnerabilities
 - GitOps-based continuous delivery using Argo CD
