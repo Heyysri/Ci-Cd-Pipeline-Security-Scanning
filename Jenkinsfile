@@ -12,7 +12,7 @@ pipeline {
         DOCKER_REGISTRY       = '<DOCKER-HUB-USERNAME>'
         DOCKER_CREDENTIALS_ID = 'docker-cred'
         MANIFEST_FILE         = 'k8s/deployment.yml'
-        GIT_REPO_NAME         = 'DevSecOps-CI-CD-Pipeline-Aws-Eks'
+        GIT_REPO_NAME         = 'Ci-Cd-Pipeline-Security-Scanning'
         GIT_USER_NAME         = '<GIT-USERNAME>'
         GIT_EMAIL             = 'GIT-EMAIL'
     }
