@@ -194,10 +194,8 @@ k8s/deployment.yml → replace Docker-Hub-Username
 
 In Jenkins:
 - New Item → Pipeline
-- Pipeline script from SCM → Git
-- Repo URL: `https://github.com/Heyysri/Ci-Cd-Pipeline-Security-Scanning.git`
-- Branch: `main`
-- Script Path: `Jenkinsfile`
+- Pipeline script
+- Use the Pipeline defined in the Jenkinsfile
 - Click **Build Now**
 
 ### Pipeline Stages
