@@ -217,6 +217,12 @@ In Jenkins:
 
 ---
 
+```bash
+⚠️ Before Creating the Cluster, update the following:
+
+replace cluster-name, region-name, version, instance-type, number-of-nodes
+```
+
 ## 9️⃣ Create AWS EKS Cluster 
 Run the following from your EC2 instance or AWS CloudShell:
 
@@ -243,12 +249,6 @@ sudo ./aws/install
 # Configure AWS CLI
 aws configure
 
-```bash
-⚠️ Before Creating the Cluster, update the following:
-
-replace cluster-name, region-name, version, instance-type, number-of-nodes
-```
-
 # Create cluster using eksctl
 eksctl create cluster \
   --name <cluster-name> \
@@ -268,29 +268,35 @@ eksctl delete cluster --name <cluster-name> --region <region-name>
 
 ---
 
+```bash
+⚠️ Before Creating the Cluster, update the following:
+
+replace namespace-name
+```
+
 ## 🔟 Install & Configure Argo CD
 
 ```bash
 # Create namespace
-kubectl create namespace argocd
+kubectl create namespace <namespace-name>
 
 # Install Argo CD
-kubectl apply -n argocd \
+kubectl apply -n <namespace-name> \
   -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 
 # Wait for pods
-kubectl get pods -n argocd
+kubectl get pods -n <namespace-name>
 
 # Expose UI
-kubectl patch svc argocd-server -n argocd \
+kubectl patch svc argocd-server -n <namespace-name> \
   -p '{"spec": {"type": "LoadBalancer"}}'
 
 # Get external IP
-kubectl get svc -n argocd
+kubectl get svc -n <namespace-name>
 
 # Get admin password
 kubectl get secret argocd-initial-admin-secret \
-  -n argocd \
+  -n <namespace-name> \
   -o jsonpath="{.data.password}" | base64 -d
 ```
 
@@ -300,7 +306,7 @@ Access Argo CD: `http://<ARGOCD-EXTERNAL-IP>`
 
 | Field | Value |
 |-------|-------|
-| App Name | `devsecops-app` |
+| App Name | `Project-app` |
 | Project | `default` |
 | Sync Policy | Automatic |
 | Repo URL | `https://github.com/Heyysri/Ci-Cd-Pipeline-Security-Scanning.git` |
