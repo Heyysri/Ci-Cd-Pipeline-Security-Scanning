@@ -243,20 +243,26 @@ sudo ./aws/install
 # Configure AWS CLI
 aws configure
 
+```bash
+⚠️ Before Creating the Cluster, update the following:
+
+replace cluster-name, region-name, version, instance-type, number-of-nodes
+```
+
 # Create cluster using eksctl
 eksctl create cluster \
-  --name eks-devsecops \
-  --region ap-south-1 \
-  --version 1.31 \
+  --name <cluster-name> \
+  --region <region-name> \
+  --version <version> \
   --nodegroup-name linux-nodes \
-  --node-type c7i-flex.large  \
-  --nodes 2
+  --node-type <instance-type>  \
+  --nodes <number-of-nodes>
 
 # Log in to Cluster
-aws eks update-kubeconfig --name eks-devsecops
+aws eks update-kubeconfig --name <cluster-name>
 
 # Delete EKS Cluster
-eksctl delete cluster --name eks-devsecops --region ap-south-1
+eksctl delete cluster --name <cluster-name> --region <region-name>
 
 ```
 
